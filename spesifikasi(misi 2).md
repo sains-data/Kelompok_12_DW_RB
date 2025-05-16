@@ -116,3 +116,15 @@ Misalnya atribut `is_canceled` dan `revenue` pada tabel fakta dapat dihitung ras
 Permasalahan kurangnya permintaan tipe kamar sesuai musim dapat dianalisis secara efisien dengan bantuan dimensi `room`, `date`, dan tabel fakta. Atribut `reserved_room_type` dan `assigned_room_type` pada `dim_room` membantu mengidentifikasi perbedaan antara kamar yang dipesan dan yang diberikan, sehingga bisa mendeteksi ketidaksesuaian permintaan atau keterbatasan stok. `Dim_date` menyediakan atribut seperti `season`, dan `is_weekend` untuk menganalisis tren musiman pemesanan kamar.
 
 Sedangkan tabel fakta menunjukkan perhitungan jumlah pemesanan dan analisis pendapatan (`revenue`) per tipe kamar pada setiap musim. Analisis ini penting untuk mengoptimalkan strategi alokasi dan promosi kamar sesuai permintaan.
+
+# 📂 Bagian 5: Kesesuaian dengan Sumber Data
+
+Berdasarkan sumber data historis pemesanan hotel yang mencakup informasi terkait pelanggan, pemesanan, dan pendapatan, rancangan *star schema* yang digunakan telah mencerminkan kebutuhan informasi secara menyeluruh. Sumber data utama berasal dari sistem manajemen pemesanan hotel (Property Management System), sistem Customer Relationship Management (CRM), serta data tambahan dari portal pemesanan daring (OTA) yang mencatat asal negara, saluran pemesanan, dan tipe kamar.
+
+Atribut seperti `booking_id`, `lead_time`, `revenue`, dan `is_canceled` sesuai dengan kebutuhan kuantitatif dan dapat langsung dimasukkan ke dalam Tabel `fact_bookings`.
+
+Sementara itu, atribut deskriptif seperti `market_segment`, `distribution_channel`, `customer_type`, `reserved_room_type`, dan `assigned_room_type` tersedia dalam data operasional dan cocok dimasukkan ke dalam Tabel Dimensi, khususnya `dim_customer` dan `dim_room`.
+
+Demikian pula, data waktu (tanggal pemesanan, *check-in*, *check-out*) yang ada dalam sistem operasional dapat dimanfaatkan dalam `dim_date` yang menyimpan informasi waktu secara terstruktur (hari, bulan, musim, weekend, dan lainnya).
+
+Struktur dan atribut yang tersedia telah mendukung pembangunan *data warehouse* dengan pendekatan skema bintang, memudahkan integrasi, mempercepat query, dan kompatibel dengan dashboard analitik seperti BI Tableau. Hal ini menunjukkan bahwa rancangan data warehouse yang dibuat telah sesuai dengan sumber data yang tersedia, kebutuhan analisis, serta selaras dengan tujuan strategis bisnis hotel.
