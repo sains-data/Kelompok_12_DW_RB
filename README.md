@@ -21,7 +21,7 @@ Kelompok_12_DW_RB/
 
 ## 🔗 Link Dataset
 
-[📁 Klik untuk akses Google Drive Dataset]((https://drive.google.com/drive/folders/1zggjDmz0dMsSoUHtLcN2jI1yqRf_HG5_?usp=sharing))]
+[📁 Klik untuk akses Google Drive Dataset](https://drive.google.com/drive/folders/1zggjDmz0dMsSoUHtLcN2jI1yqRf_HG5_?usp=sharing)]
 
 ## 👥 Anggota Kelompok
 
