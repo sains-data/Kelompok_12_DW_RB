@@ -156,3 +156,54 @@ Informasi perencanaan tamu.
 
 **Gambar 1.** Model ini menggunakan **Star Schema**, dengan `fact_bookings` sebagai pusat dan enam tabel dimensi yang saling terhubung melalui foreign key.
 
+
+## 🧩 Gambar 1. Dimensi Schema
+
+Struktur skema multidimensi dalam *Data Warehouse* industri pariwisata dan *hospitality* dirancang untuk memudahkan analisis pemesanan hotel dari berbagai sudut pandang.
+
+- **dim_date** mencakup elemen waktu seperti tahun, bulan, hari, musim, dan akhir pekan, yang berguna untuk mengamati tren musiman dan perilaku pemesanan harian.
+- **dim_hotel** menyimpan informasi tentang jenis dan lokasi hotel, yang berguna untuk menganalisis kinerja berdasarkan tipe dan segmen hotel.
+- **dim_customer** menggambarkan karakteristik pengunjung, termasuk jenis pelanggan, negara asal, status pelanggan berulang, dan jenis deposit, yang membantu dalam segmentasi serta loyalitas pelanggan.
+- **dim_booking** mencakup informasi tentang pemesanan seperti segmen pasar, saluran distribusi, jenis kamar, dan status daftar tunggu, yang penting untuk strategi penjualan dan alokasi kamar.
+- **dim_planning** berisi data perencanaan tamu, seperti waktu tunggu dan jumlah permintaan khusus, yang mendukung operasi serta manajemen layanan.
+
+---
+
+## 📚 4. Sumber Data dan Metadata
+
+### a. Sumber Data
+Data berasal dari dataset yang tersedia di Kaggle dengan judul [“Hotel Booking Demand”](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand). Dataset ini berisi **119.390 observasi** untuk sebuah Hotel Kota dan Hotel Resort.
+
+Setiap observasi merepresentasikan satu pemesanan hotel antara tanggal **1 Juli 2015 hingga 31 Agustus 2017**, termasuk pemesanan yang benar-benar terealisasi maupun yang dibatalkan.
+
+### b. Metadata
+
+#### 📊 Tabel 2. Metadata
+
+| **Nama Kolom**                   | **Tipe Data** | **Deskripsi**                                                  |
+|----------------------------------|---------------|----------------------------------------------------------------|
+| Hotel                            | STRING        | Tipe Hotel                                                     |
+| Is_canceled                      | INTEGER       | Reservasi Dibatalkan (1/0)                                     |
+| Lead_time                        | INTEGER       | Jumlah Hari Pemesanan                                          |
+| Arrival_date_year                | INTEGER       | Tahun Kedatangan                                               |
+| Arrival_date_month               | STRING        | Bulan Kedatangan                                               |
+| Arrival_date_week                | INTEGER       | Minggu Kedatangan                                              |
+| Arrival_date_day                 | INTEGER       | Hari Kedatangan                                                |
+| Market_segment                   | OBJECT        | Segmen Pasar Pemesanan                                         |
+| Distribution_channel             | OBJECT        | Saluran Distribusi Pemesanan                                   |
+| Is_repeated_guest                | INTEGER       | Tamu yang pernah menginap sebelumnya                           |
+| Previous_cancellations           | INTEGER       | Jumlah Pembatalan Reservasi Sebelumnya                         |
+| Previous_bookings_not_canceled  | INTEGER       | Jumlah reservasi sebelumnya yang tidak dibatalkan              |
+| Reserved_room_type               | OBJECT        | Tipe Kamar Yang Dipesan                                        |
+| Booking_changes                  | INTEGER       | Jumlah Perubahan Pada Reservasi                                |
+| Deposit_type                     | OBJECT        | Tipe Deposit                                                   |
+| Agent                            | INTEGER       | ID Agen Pemesanan                                              |
+| Company                          | INTEGER       | ID Perusahaan Pemesanan                                        |
+| Days_in_waiting_list            | INTEGER       | Jumlah Hari di Daftar Tunggu                                   |
+| Customer_type                    | OBJECT        | Tipe Pelanggan                                                 |
+| Adr                              | FLOAT         | Rata-rata Harga Harian Per Kamar                               |
+
+
+## 📚 Referensi
+
+1. Antonio, N., Almeida, A., & Nunes, L. (2019). Hotel booking demand datasets. *Data in Brief, 22*, 41–49. [https://doi.org/10.1016/j.dib.2018.11.126](https://doi.org/10.1016/j.dib.2018.11.126)
