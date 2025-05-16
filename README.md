@@ -10,14 +10,6 @@ Repositori ini berisi hasil tugas kelompok untuk mata kuliah Pemrograman Berbasi
 - Menyajikan data teragregasi untuk analisis BI menggunakan Power BI/SSRS
 
 ## 📂 Struktur Repo
-Kelompok_12_DW_RB/
-├── data/ # Dataset mentah (CSV/JSON)
-├── src/ # Skrip SQL & pipeline ETL
-│ └── etl_pipeline.sql
-├── README.md # Ringkasan proyek
-├── spesifikasi.md # Dokumentasi Tugas Misi 1
-└── desain-konseptual.md # Dokumentasi Tugas Misi 2
-
 
 ## 🔗 Link Dataset
 
