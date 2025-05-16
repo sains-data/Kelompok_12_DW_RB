@@ -69,3 +69,90 @@ Melalui proyek ini, sistem data warehouse akan membantu mengelola, menyimpan, da
 - Waiting list (`waiting_list`)
 
 
+## 🧩 Dimensi Schema (Star Schema)
+
+### 🌟 Tabel Fakta: `fact_bookings`
+Berisi data utama pemesanan yang menjadi pusat analisis.
+
+| Kolom                | Keterangan                    |
+|----------------------|-------------------------------|
+| booking_id           | ID pemesanan (PK)             |
+| date_id              | FK ke dim_date                |
+| hotel_id             | FK ke dim_hotel               |
+| customer_id          | FK ke dim_customer            |
+| booking_dim_id       | FK ke dim_booking             |
+| planning_id          | FK ke dim_planning            |
+| total_guests         | Jumlah tamu                   |
+| stay_total_nights    | Lama menginap                 |
+| revenue              | Pendapatan                    |
+| special_request_count| Jumlah permintaan khusus      |
+| lead_time_days       | Jumlah hari menunggu          |
+| is_canceled          | Status pembatalan             |
+
+---
+
+### 📅 `dim_date`
+Informasi waktu dan kalender.
+
+| Kolom       | Keterangan         |
+|-------------|--------------------|
+| id          | ID tanggal (PK)    |
+| year        | Tahun              |
+| month       | Bulan              |
+| day         | Hari               |
+| season      | Musim              |
+| is_weekend  | Weekend/Weekday    |
+
+---
+
+### 🏨 `dim_hotel`
+Informasi terkait hotel.
+
+| Kolom        | Keterangan          |
+|--------------|---------------------|
+| id           | ID hotel (PK)       |
+| hotel_type   | Jenis hotel         |
+| hotel_country| Negara hotel        |
+
+---
+
+### 👤 `dim_customer`
+Detail tamu/pelanggan.
+
+| Kolom          | Keterangan              |
+|----------------|--------------------------|
+| id             | ID pelanggan (PK)        |
+| customer_type  | Tipe tamu                |
+| country        | Negara asal              |
+| is_repeated_guest | Apakah pelanggan loyal |
+| deposit_type   | Tipe deposit             |
+
+---
+
+### 📦 `dim_booking`
+Detail pemesanan dan distribusi.
+
+| Kolom             | Keterangan                   |
+|-------------------|------------------------------|
+| id                | ID booking_dim (PK)          |
+| market_segment    | Segmen pasar                 |
+| distribution_channel | Saluran distribusi        |
+| reserved_room_type   | Jenis kamar dipesan       |
+| assigned_room_type   | Jenis kamar dialokasikan  |
+| waiting_list         | Status waiting list       |
+
+---
+
+### 📋 `dim_planning`
+Informasi perencanaan tamu.
+
+| Kolom              | Keterangan                  |
+|--------------------|-----------------------------|
+| id                 | ID planning (PK)            |
+| lead_time          | Jarak hari pemesanan        |
+| total_of_special_requests | Jumlah permintaan khusus |
+
+---
+
+**Gambar 1.** Model ini menggunakan **Star Schema**, dengan `fact_bookings` sebagai pusat dan enam tabel dimensi yang saling terhubung melalui foreign key.
+
