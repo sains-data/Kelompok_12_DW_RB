@@ -58,12 +58,70 @@ Menggunakan pendekatan **Medallion Architecture**:
 - **Tabel Fakta:**
   - `FactBooking`: Data reservasi dan transaksi
 
+| Kolom                 | Tipe Data       | Keterangan                                                                 |
+|-----------------------|-----------------|-----------------------------------------------------------------------------|
+| Booking_ID            | INT             | Kunci unik untuk setiap reservasi.                                          |
+| Customer_Key          | INT             | Kunci asing ke tabel DimCustomer.                                           |
+| Date_Key              | DATE            | Kunci asing ke tabel DimDate (tanggal check-in).                           |
+| Hotel_Key             | INT             | Kunci asing ke tabel DimHotel.                                              |
+| Room_Key              | INT             | Kunci asing ke tabel DimRoom.                                               |
+| Country_Key           | INT             | Kunci asing ke tabel DimCountry (negara asal pelanggan).                   |
+| Is_Canceled           | BOOLEAN         | Indikator apakah reservasi dibatalkan (TRUE/FALSE).                        |
+| Lead_Time             | INT             | Jumlah hari antara tanggal pemesanan dan check-in.                          |
+| Stay_Total_Nights     | INT             | Total durasi menginap (malam).                                              |
+| Total_Guests          | INT             | Jumlah tamu (dewasa, anak-anak, bayi).                                      |
+| Revenue               | DECIMAL(18,2)   | Pendapatan total dari reservasi.                                            |
+| Total_of_Special_Requests | INT         | Jumlah permintaan khusus (parkir, ranjang tambahan, dll).                   |
+| Assigned_Room_Type    | VARCHAR(20)     | Tipe kamar sebenarnya yang dialokasikan.                                    |
+
+---
+
 - **Tabel Dimensi:**
   - `DimCustomer`: Informasi pelanggan
+    | Kolom               | Tipe Data      | Deskripsi                                          |
+    |---------------------|----------------|----------------------------------------------------|
+    | Customer_Key        | INT            | Kunci unik untuk setiap pelanggan.                 |
+    | Customer_Type       | VARCHAR(50)    | Jenis pelanggan (Individual, Group).               |
+    | Is_Repeated_Guest   | BOOLEAN        | Apakah pelanggan adalah tamu berulang.             |
+    | Market_Segment      | VARCHAR(50)    | Segmen pasar (Online TA, Corporate, dll).          |
+    | Distribution_Channel| VARCHAR(50)    | Saluran distribusi (GDS, Direct, dll).             |
+    | Deposit_Type        | VARCHAR(50)    | Tipe deposit untuk reservasi.                      |
+    | Waiting_List        | BOOLEAN        | Apakah reservasi pernah masuk daftar tunggu.       |
+
+---
   - `DimDate`: Informasi waktu dan musim
+    | Kolom        | Tipe Data     | Deskripsi                                        |
+    |--------------|---------------|--------------------------------------------------|
+    | Date_Key     | DATE          | Tanggal unik (check-in).                         |
+    | Day          | INT           | Hari dalam bulan (1–31).                         |
+    | Month        | INT           | Bulan dalam tahun (1–12).                        |
+    | Quarter      | INT           | Kuartal (1–4).                                   |
+    | Year         | INT           | Tahun.                                           |
+    | Season       | VARCHAR(20)   | Musim (Musim Panas, Musim Dingin, dll).         |
+    | Is_Week_End  | BOOLEAN       | Apakah tanggal adalah akhir pekan.              |
+
+---
   - `DimHotel`: Informasi hotel
+  |  Kolom          | Tipe Data     | Deskripsi                                          |
+  |----------------|---------------|----------------------------------------------------|
+  | Hotel_Key      | INT           | Kunci unik untuk setiap hotel.                     |
+  | Hotel_Type     | VARCHAR(50)   | Jenis hotel (City Hotel, Resort Hotel).            |
+  | Hotel_Country  | VARCHAR(50)   | Negara lokasi hotel.                               |
+
+---
   - `DimRoom`: Informasi tipe kamar
+    | Kolom               | Tipe Data     | Deskripsi                                |
+    |---------------------|---------------|------------------------------------------|
+    | Room_Key            | INT           | Kunci unik untuk setiap tipe kamar.       |
+    | Reserved_Room_Type  | VARCHAR(20)   | Tipe kamar yang dipesan oleh pelanggan.  |
+
+---
   - `DimCountry`: Informasi geografis pelanggan
+    | Kolom        | Tipe Data       | Deskripsi                                    |
+    |--------------|------------------|----------------------------------------------|
+    | Country_Key  | INT              | Kunci unik untuk setiap negara.              |
+    | Country_Name | VARCHAR(100)     | Nama lengkap negara asal pelanggan.         |
+    | Region       | VARCHAR(100)     | Wilayah geografis (misalnya, Asia, Eropa).  |
 
 ## 📊 Visualisasi & Analitik
 
