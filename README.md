@@ -1,5 +1,10 @@
 # 📦 Proyek Data Warehouse - Industri Pariwisata & Hospitality
 
+![Platform](https://img.shields.io/badge/Platform-SQL%20Server-blue)
+![Tool](https://img.shields.io/badge/ETL-SSIS-informational)
+![Visualization](https://img.shields.io/badge/BI-Power%20BI-yellow)
+![Status](https://img.shields.io/badge/Project-Final-green)
+
 Repositori ini merupakan dokumentasi proyek tugas besar dari mata kuliah **Pemrograman Berbasis Fungsi - Sains Data** di **Institut Teknologi Sumatera (ITERA)**. Proyek ini berfokus pada **perancangan dan implementasi data warehouse** untuk sektor pariwisata dan hospitality, dengan studi kasus perusahaan fiktif *Demond Stay Group*.
 
 ## 🎯 Tujuan Proyek
@@ -27,6 +32,7 @@ Perusahaan fiktif yang mengelola **Demand City Hotel** dan **Demand Resort Hotel
 - 
 ## 🛠 Metode Pengembangan
 ![Metode Waterfall](https://drive.google.com/uc?export=view&id=1Br6dyLUMk6mjkoSGgQEvGYstwffgccas)
+> **Gambar 1.** Tahapan metode Waterfall yang digunakan dalam pengembangan proyek.
 Proyek ini menggunakan pendekatan **Waterfall**, melalui empat tahapan utama (misi 1–4):
 
 1. Requirements Definition  
@@ -49,6 +55,7 @@ Proyek ini menggunakan pendekatan **Waterfall**, melalui empat tahapan utama (mi
 
 Menggunakan pendekatan **Medallion Architecture**:
 ![Arsitektur Sistem](https://drive.google.com/uc?export=view&id=1w0M2MfaKyQzqr0zGV0LJcRJfBadzhBXi)
+> **Gambar 2.** Arsitektur Medallion: Bronze, Silver, dan Gold Layer.
 1. **Bronze Layer:** Menyimpan data mentah dari berbagai sumber (CSV, JSON, Excel)
 2. **Silver Layer:** Menyimpan data yang telah dibersihkan dan tervalidasi (format Parquet)
 3. **Gold Layer:** Menyimpan data terstruktur siap analisis berbasis skema bintang (*Star Schema*)
