@@ -102,7 +102,7 @@ Menggunakan pendekatan **Medallion Architecture**:
 
 ---
   - `DimHotel`: Informasi hotel
-  |  Kolom          | Tipe Data     | Deskripsi                                          |
+  | Kolom          | Tipe Data     | Deskripsi                                          |
   |----------------|---------------|----------------------------------------------------|
   | Hotel_Key      | INT           | Kunci unik untuk setiap hotel.                     |
   | Hotel_Type     | VARCHAR(50)   | Jenis hotel (City Hotel, Resort Hotel).            |
@@ -112,7 +112,7 @@ Menggunakan pendekatan **Medallion Architecture**:
   - `DimRoom`: Informasi tipe kamar
     | Kolom               | Tipe Data     | Deskripsi                                |
     |---------------------|---------------|------------------------------------------|
-    | Room_Key            | INT           | Kunci unik untuk setiap tipe kamar.       |
+    | Room_Key            | INT           | Kunci unik untuk setiap tipe kamar.      |
     | Reserved_Room_Type  | VARCHAR(20)   | Tipe kamar yang dipesan oleh pelanggan.  |
 
 ---
