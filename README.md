@@ -38,7 +38,7 @@ Perusahaan fiktif yang mengelola **Demand City Hotel** dan **Demand Resort Hotel
 ## 📐 Arsitektur Sistem
 
 Menggunakan pendekatan **Medallion Architecture**:
-
+![Arsitektur Sistem](https://drive.google.com/uc?export=view&id=1w0M2MfaKyQzqr0zGV0LJcRJfBadzhBXi)
 1. **Bronze Layer:** Menyimpan data mentah dari berbagai sumber (CSV, JSON, Excel)
 2. **Silver Layer:** Menyimpan data yang telah dibersihkan dan tervalidasi (format Parquet)
 3. **Gold Layer:** Menyimpan data terstruktur siap analisis berbasis skema bintang (*Star Schema*)
