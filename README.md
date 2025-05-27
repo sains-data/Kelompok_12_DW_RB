@@ -88,7 +88,6 @@ Menggunakan pendekatan **Medallion Architecture**:
     | Deposit_Type        | VARCHAR(50)    | Tipe deposit untuk reservasi.                      |
     | Waiting_List        | BOOLEAN        | Apakah reservasi pernah masuk daftar tunggu.       |
 
----
   - `DimDate`: Informasi waktu dan musim
     | Kolom        | Tipe Data     | Deskripsi                                        |
     |--------------|---------------|--------------------------------------------------|
@@ -100,7 +99,6 @@ Menggunakan pendekatan **Medallion Architecture**:
     | Season       | VARCHAR(20)   | Musim (Musim Panas, Musim Dingin, dll).         |
     | Is_Week_End  | BOOLEAN       | Apakah tanggal adalah akhir pekan.              |
 
----
   - `DimHotel`: Informasi hotel
     
   | Kolom          | Tipe Data     | Deskripsi                                          |
@@ -109,14 +107,12 @@ Menggunakan pendekatan **Medallion Architecture**:
   | Hotel_Type     | VARCHAR(50)   | Jenis hotel (City Hotel, Resort Hotel).            |
   | Hotel_Country  | VARCHAR(50)   | Negara lokasi hotel.                               |
 
----
   - `DimRoom`: Informasi tipe kamar
     | Kolom               | Tipe Data     | Deskripsi                                |
     |---------------------|---------------|------------------------------------------|
     | Room_Key            | INT           | Kunci unik untuk setiap tipe kamar.      |
     | Reserved_Room_Type  | VARCHAR(20)   | Tipe kamar yang dipesan oleh pelanggan.  |
 
----
   - `DimCountry`: Informasi geografis pelanggan
     | Kolom        | Tipe Data       | Deskripsi                                    |
     |--------------|------------------|----------------------------------------------|
