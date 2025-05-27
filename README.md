@@ -5,7 +5,7 @@
 ![Visualization](https://img.shields.io/badge/BI-Power%20BI-yellow)
 ![Status](https://img.shields.io/badge/Project-Final-green)
 
-Repositori ini merupakan dokumentasi proyek tugas besar dari mata kuliah **Pemrograman Berbasis Fungsi - Sains Data** di **Institut Teknologi Sumatera (ITERA)**. Proyek ini berfokus pada **perancangan dan implementasi data warehouse** untuk sektor pariwisata dan hospitality, dengan studi kasus perusahaan fiktif *Demond Stay Group*.
+Repositori ini merupakan dokumentasi proyek tugas besar dari mata kuliah **Pergudangan Data - Sains Data** di **Institut Teknologi Sumatera (ITERA)**. Proyek ini berfokus pada **perancangan dan implementasi data warehouse** untuk sektor pariwisata dan hospitality, dengan studi kasus perusahaan fiktif *Demond Stay Group*.
 
 ## 🎯 Tujuan Proyek
 
