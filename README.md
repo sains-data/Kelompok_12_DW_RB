@@ -102,6 +102,7 @@ Menggunakan pendekatan **Medallion Architecture**:
 
 ---
   - `DimHotel`: Informasi hotel
+    
   | Kolom          | Tipe Data     | Deskripsi                                          |
   |----------------|---------------|----------------------------------------------------|
   | Hotel_Key      | INT           | Kunci unik untuk setiap hotel.                     |
