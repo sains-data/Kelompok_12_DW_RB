@@ -24,6 +24,16 @@ Repositori ini merupakan dokumentasi proyek tugas besar dari mata kuliah **Pemro
 Perusahaan fiktif yang mengelola **Demand City Hotel** dan **Demand Resort Hotel**. Fokus utama:
 - Pemanfaatan data pelanggan dan reservasi untuk meningkatkan efisiensi operasional
 - Strategi harga dinamis, program loyalitas, dan analisis permintaan musiman
+- 
+## 🛠 Metode Pengembangan
+![Metode Waterfall](https://drive.google.com/uc?export=view&id=1Br6dyLUMk6mjkoSGgQEvGYstwffgccas)
+Proyek ini menggunakan pendekatan **Waterfall**, melalui empat tahapan utama (misi 1–4):
+
+1. Requirements Definition  
+2. System and Software Design  
+3. Implementation and Unit Testing  
+4. Integration and System Testing  
+5. Operation and Maintenance
 
 ## 🛠 Teknologi & Tools
 
