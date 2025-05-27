@@ -101,11 +101,11 @@ Menggunakan pendekatan **Medallion Architecture**:
 
   - `DimHotel`: Informasi hotel
     
-  | Kolom          | Tipe Data     | Deskripsi                                          |
-  |----------------|---------------|----------------------------------------------------|
-  | Hotel_Key      | INT           | Kunci unik untuk setiap hotel.                     |
-  | Hotel_Type     | VARCHAR(50)   | Jenis hotel (City Hotel, Resort Hotel).            |
-  | Hotel_Country  | VARCHAR(50)   | Negara lokasi hotel.                               |
+    | Kolom          | Tipe Data     | Deskripsi                                          |
+    |----------------|---------------|----------------------------------------------------|
+    | Hotel_Key      | INT           | Kunci unik untuk setiap hotel.                     |
+    | Hotel_Type     | VARCHAR(50)   | Jenis hotel (City Hotel, Resort Hotel).            |
+    | Hotel_Country  | VARCHAR(50)   | Negara lokasi hotel.                               |
 
   - `DimRoom`: Informasi tipe kamar
     | Kolom               | Tipe Data     | Deskripsi                                |
