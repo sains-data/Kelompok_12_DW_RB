@@ -230,5 +230,6 @@ Menggunakan pendekatan **Medallion Architecture**:
 
 Untuk melihat detail dari tugas besar kelompok kami, silakan lihat laporan lengkap pada tautan berikut:
 
-👉 [Laporan Tugas Besar Data Warehouse Kelompok 12 (PDF)](https://github.com/sains-data/Kelompok_12_DW_RB/blob/142c2e2eb681a29df4e30d92b1c439072a4148f5/Laporan%20tugas%20Besar%20Data%20Warehouse%20Kelompok%2012.pdf)
+👉 [Laporan Tugas Besar Data Warehouse Kelompok 12](https://github.com/sains-data/Kelompok_12_DW_RB/blob/142c2e2eb681a29df4e30d92b1c439072a4148f5/Laporan%20tugas%20Besar%20Data%20Warehouse%20Kelompok%2012.pdf)
 
+🖼️ [Poster Data Warehouse](https://github.com/sains-data/Kelompok_12_DW_RB/blob/5cc90a2b97ad7df6b29cd6208ac54e20f2ea013f/Poster%20Data%20Warehouse%20KElompok%2012.pdf)
