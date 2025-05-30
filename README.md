@@ -26,10 +26,15 @@ Repositori ini merupakan dokumentasi proyek tugas besar dari mata kuliah **Pergu
 
 ## 🏨 Studi Kasus: Demond Stay Group
 
-Perusahaan fiktif yang mengelola **Demand City Hotel** dan **Demand Resort Hotel**. Fokus utama:
-- Pemanfaatan data pelanggan dan reservasi untuk meningkatkan efisiensi operasional
-- Strategi harga dinamis, program loyalitas, dan analisis permintaan musiman
-- 
+Perusahaan fiktif yang menaungi:
+- **Demand City Hotel**
+- **Demand Resort Hotel**
+
+Fokus utama:
+- Meningkatkan efisiensi operasional hotel berbasis analitik data
+- Strategi harga dinamis & manajemen permintaan musiman
+- Program loyalitas pelanggan berbasis segmentasi
+
 ## 🛠 Metode Pengembangan
 ![Metode Waterfall](https://drive.google.com/uc?export=view&id=1Br6dyLUMk6mjkoSGgQEvGYstwffgccas)
 > **Gambar 1.** Tahapan metode Waterfall yang digunakan dalam pengembangan proyek.
@@ -43,13 +48,16 @@ Proyek ini menggunakan pendekatan **Waterfall**, melalui empat tahapan utama (mi
 
 ## 🛠 Teknologi & Tools
 
-- **SQL Server Management Studio (SSMS)**
-- **SQL Server Data Tools (SSDT)**
-- **SQL Server Integration Services (SSIS)**
-- **SQL Server Reporting Services (SSRS)**
-- **Power BI** (Dashboard Visualisasi)
-- **Format Data:** CSV, JSON, Excel
-- **Format Storage:** Apache Parquet (untuk performa analitik optimal)
+| Teknologi / Tools                        | Fungsi                                                                 |
+|-----------------------------------------|------------------------------------------------------------------------|
+| **SQL Server Management Studio (SSMS)** | Manajemen database dan eksekusi query SQL                             |
+| **SQL Server Data Tools (SSDT)**        | Desain dan deployment proyek database serta paket SSIS/SSRS           |
+| **SQL Server Integration Services (SSIS)** | Pengembangan pipeline ETL untuk ekstraksi, transformasi, dan pemuatan data |
+| **SQL Server Reporting Services (SSRS)**| Membuat dan menyajikan laporan berbasis server                        |
+| **Power BI**                            | Visualisasi interaktif dan dashboard analitik                          |
+| **Format Data**: CSV, JSON, Excel       | Format awal data mentah pada Bronze Layer                             |
+| **Format Storage**: Apache Parquet      | Format penyimpanan berbasis kolom untuk efisiensi analitik di Gold Layer |
+
 
 ## 📐 Arsitektur Sistem
 
@@ -138,19 +146,20 @@ Menggunakan pendekatan **Medallion Architecture**:
 ## 🧩 Evaluasi & Rencana Pengembangan
 
 **Keberhasilan:**
-- Sistem berhasil mengintegrasikan data operasional hotel dan mendukung analisis data historis dan real-time
+- Integrasi data operasional berjalan lancar
+- Visualisasi mendukung pengambilan keputusan manajerial
 
 **Tantangan:**
 - Keterbatasan data sumber (satu dataset)
 - Kompleksitas transformasi saat proses ETL
 
 **Pengembangan ke depan:**
-- Integrasi data real-time (streaming)
-- Penambahan dimensi musiman dan event
-- Automasi ETL dan CDC
-- Modul prediksi perilaku tamu (ML)
-- Penguatan sistem keamanan dan audit
-- Dashboard adaptif untuk manajemen hotel
+- Integrasi data real-time dengan Kafka atau Pub/Sub
+- Penambahan dimensi event musiman & lokal
+- Automasi ETL & CDC (Change Data Capture)
+- Modul machine learning untuk prediksi perilaku tamu
+- Audit data, enkripsi, dan RBAC
+- Dashboard mobile untuk manajer hotel
 
 ## 🔗 Link Dataset
 
@@ -158,12 +167,15 @@ Menggunakan pendekatan **Medallion Architecture**:
 
 ## 👥 Anggota Kelompok 12
 
-- Muhammad Hanif Faros – 121450048  
-- Jaclin Alcavella – 122450015  
-- Elok Fiola – 122450051  
-- Febiya Jomy Pratiwi – 122450074  
-- Rut Junita Sari Siburian – 122450103  
-- Elisabeth Claudia S. – 122450123
+| No | Nama Lengkap                    | NIM         | Peran           |
+|----|----------------------------------|-------------|------------------|
+| 1  | Rut Junita Sari Siburian        | 122450103   | Ketua Kelompok   |
+| 2  | Muhammad Hanif Faros            | 121450048   | Anggota          |
+| 3  | Jaclin Alcavella                | 122450015   | Anggota          |
+| 4  | Elok Fiola                      | 122450051   | Anggota          |
+| 5  | Febiya Jomy Pratiwi             | 122450074   | Anggota          |
+| 6  | Elisabeth Claudia S.            | 122450123   | Anggota          |
+
 
 ---
 
