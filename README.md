@@ -1,8 +1,13 @@
 # 📦 Proyek Data Warehouse - Industri Pariwisata & Hospitality
 
 ![Platform](https://img.shields.io/badge/Platform-SQL%20Server-blue)
-![Tool](https://img.shields.io/badge/ETL-SSIS-informational)
+![SSMS](https://img.shields.io/badge/Tool-SSMS-lightgrey)
+![SSDT](https://img.shields.io/badge/Tool-SSDT-lightgrey)
+![ETL](https://img.shields.io/badge/ETL-SSIS-informational)
+![Reporting](https://img.shields.io/badge/Reporting-SSRS-orange)
 ![Visualization](https://img.shields.io/badge/BI-Power%20BI-yellow)
+![Data%20Format](https://img.shields.io/badge/Data_CSV%2FJSON%2FExcel-brightgreen)
+![Storage](https://img.shields.io/badge/Storage-Apache%20Parquet-blueviolet)
 ![Status](https://img.shields.io/badge/Project-Final-green)
 
 Repositori ini merupakan dokumentasi proyek tugas besar dari mata kuliah **Pergudangan Data - Sains Data** di **Institut Teknologi Sumatera (ITERA)**. Proyek ini berfokus pada **perancangan dan implementasi data warehouse** untuk sektor pariwisata dan hospitality, dengan studi kasus perusahaan fiktif *Demond Stay Group*.
