@@ -143,6 +143,46 @@ Menggunakan pendekatan **Medallion Architecture**:
     | Country_Name | VARCHAR(100)     | Nama lengkap negara asal pelanggan.         |
     | Region       | VARCHAR(100)     | Wilayah geografis (misalnya, Asia, Eropa).  |
 
+## 📁 Struktur Direktori Repositori
+
+```plaintext
+📦 data-warehouse-hospitality/
+├── 📂 docs/
+│   ├── laporan-akhir.pdf               # Dokumen laporan lengkap
+│   ├── poster.pdf                      # Poster visual proyek
+│   └── presentasi.pdf                  # Slide presentasi akhir
+│
+├── 📂 data/
+│   ├── raw/                            # Data mentah (CSV, JSON, Excel)
+│   │   └── hotel_booking_data.csv
+│   ├── cleaned/                        # Data bersih dan siap analisis
+│   └── dictionary.md                   # Deskripsi data dan definisi kolom
+│
+├── 📂 etl/
+│   ├── ssis-package.dtsx               # Paket ETL menggunakan SSIS
+│   ├── mapping-doc.md                  # Dokumen mapping ETL
+│   └── sql-scripts/                    # Skrip SQL (DDL, DML, indexing)
+│       ├── create_tables.sql
+│       ├── insert_sample_data.sql
+│       └── indexing.sql
+│
+├── 📂 model/
+│   ├── star-schema.png                 # Diagram skema bintang
+│   ├── medallion-architecture.png      # Diagram arsitektur Medallion
+│   └── dataflow.png                    # Alur proses data dari sumber ke dashboard
+│
+├── 📂 dashboard/
+│   ├── powerbi-report.pbix            # File Power BI (dashboard)
+│   ├── dashboard-screenshots/         # Gambar dashboard
+│   │   ├── loyal-customers.png
+│   │   ├── seasonal-trends.png
+│   │   └── cancellation-rate.png
+│   └── dashboard-description.md       # Penjelasan tiap visualisasi
+│
+├── README.md                          # Dokumentasi utama proyek
+└── LICENSE                            # Lisensi repositori (opsional)
+````
+
 ## 📊 Visualisasi & Analitik
 
 - Dashboard Power BI:
