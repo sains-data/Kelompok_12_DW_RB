@@ -40,11 +40,14 @@ Fokus utama:
 > **Gambar 1.** Tahapan metode Waterfall yang digunakan dalam pengembangan proyek.
 Proyek ini menggunakan pendekatan **Waterfall**, melalui empat tahapan utama (misi 1–4):
 
-1. Requirements Definition  
-2. System and Software Design  
-3. Implementation and Unit Testing  
-4. Integration and System Testing  
-5. Operation and Maintenance
+| Tahap                         | Penjelasan Singkat                                                                 |
+|------------------------------|------------------------------------------------------------------------------------|
+| 1. Requirements Definition    | Mengumpulkan kebutuhan sistem dan menganalisis masalah bisnis hotel.              |
+| 2. System and Software Design| Merancang arsitektur data warehouse, skema data, dan alur ETL.                    |
+| 3. Implementation and Unit Testing | Membangun pipeline ETL, membuat tabel fakta/dimensi, dan menguji komponen.     |
+| 4. Integration and System Testing | Menggabungkan seluruh komponen dan menguji hasil akhir visualisasi & query.   |
+| 5. Operation and Maintenance | Menyempurnakan sistem, dokumentasi, serta menyiapkan pengembangan ke depan.       |
+
 
 ## 🛠 Teknologi & Tools
 
@@ -178,5 +181,9 @@ Menggunakan pendekatan **Medallion Architecture**:
 
 
 ---
+## 📑 Laporan Lengkap
 
-> Untuk detail lengkap, silakan lihat dokumen laporan akhir proyek.
+Untuk melihat detail dari tugas besar kelompok kami, silakan lihat laporan lengkap pada tautan berikut:
+
+👉 [Laporan Tugas Besar Data Warehouse Kelompok 12 (PDF)](https://github.com/sains-data/Kelompok_12_DW_RB/blob/142c2e2eb681a29df4e30d92b1c439072a4148f5/Laporan%20tugas%20Besar%20Data%20Warehouse%20Kelompok%2012.pdf)
+
