@@ -162,9 +162,10 @@ Menggunakan pendekatan **Medallion Architecture**:
 │   ├── ssis-package.dtsx               # Paket ETL menggunakan SSIS
 │   ├── mapping-doc.md                  # Dokumen mapping ETL
 │   └── sql-scripts/                    # Skrip SQL (DDL, DML, indexing)
-│       ├── create_tables.sql
-│       ├── insert_sample_data.sql
-│       └── indexing.sql
+│       ├── create_tables.sql                (skema bintang)
+|       ├── insert_sample_data.sql           (untuk data dummy)
+|       ├── create_views.sql                 (untuk analisis)
+|       └── indexing.sql                    (untuk optimasi query)
 │
 ├── 📂 model/
 │   ├── star-schema.png                 # Diagram skema bintang
